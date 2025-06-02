@@ -1,10 +1,19 @@
 # ninja log v5
-1	765	1748616956555789704	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	32c25ca0fc90d6d6
-1	772	1748616956568791108	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	547ded99e50acb88
-0	856	1748616956647799641	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e3800b35765964c9
-0	938	1748616956732808823	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	8c3c7359c1087076
-1	956	1748616956750810767	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	fd476103f8494b1a
-0	971	1748616956766812495	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	80e1e497dee8348e
-0	1106	1748616956899826861	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	97b66eae51c7a383
 0	1144	1748616956938831074	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	45005361a274ff5b
+1	765	1748616956555789704	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	32c25ca0fc90d6d6
+0	1106	1748616956899826861	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	97b66eae51c7a383
+0	971	1748616956766812495	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	80e1e497dee8348e
+0	938	1748616956732808823	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	8c3c7359c1087076
+0	856	1748616956647799641	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e3800b35765964c9
 1144	1171	1748616956973834855	/home/juliano/Documents/Projects/Unity/Tananarivelo2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6a604hv1/obj/arm64-v8a/libgame.so	8ad879053c05002b
+1	772	1748616956568791108	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	547ded99e50acb88
+1	956	1748616956750810767	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	fd476103f8494b1a
+7	837	1748780858807863323	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	8c3c7359c1087076
+6	866	1748780858839854279	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	80e1e497dee8348e
+8	869	1748780858842853431	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	32c25ca0fc90d6d6
+8	888	1748780858860848343	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	547ded99e50acb88
+6	945	1748780858911833929	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	e3800b35765964c9
+9	987	1748780858960820080	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	fd476103f8494b1a
+7	1123	1748780859096781900	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	97b66eae51c7a383
+5	1218	1748780859192755027	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	45005361a274ff5b
+1218	1273	1748780859254737671	/home/juliano/Documents/Projects/Unity/Tananarivelo2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6a604hv1/obj/arm64-v8a/libgame.so	8ad879053c05002b

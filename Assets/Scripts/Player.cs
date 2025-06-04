@@ -1,7 +1,13 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public event EventHandler OnInteractableDetected;
+    public event EventHandler OnInteractableOutOfRange;
+
+    public static Player Instance {get; private set;}
+
     private const string ANIM_WALKING = "isWalking";
 
     [SerializeField] private float moveSpeed = 5f;
@@ -9,7 +15,30 @@ public class Player : MonoBehaviour
 
     [SerializeField] private Animator animator;
     [SerializeField] private Transform playerMeshTransform;
+    [SerializeField] private Transform raycastOriginTransform;
 
+    [SerializeField] private LayerMask interactableLayerMask;
+
+
+    private Interactable interactedObject;
+    private Interactable previousInteractable;
+    
+    private Vector3 lastInteractDir;
+
+
+    private void Awake() {
+       Instance = this;
+    }
+
+    private void Start() {
+       HUD.Instance.OnActionButtonPressed += HUD_OnActionButtonPressed;
+    }
+
+    private void HUD_OnActionButtonPressed(object sender, EventArgs e) {
+        if(interactedObject != null) {
+            interactedObject.Interact();
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -18,6 +47,7 @@ public class Player : MonoBehaviour
 
         HandleMovement(inputVector);
         HandleAnimation(inputVector);
+        HandleInteract(inputVector);
     }
 
     private void HandleAnimation(Vector2 inputVector)
@@ -58,5 +88,44 @@ public class Player : MonoBehaviour
         }
 
         // Move the player
+    }
+
+     private void HandleInteract(Vector2 inputVector)
+    {
+
+        Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
+
+        float interactDistance = 2f;
+
+
+        if (Physics.Raycast(raycastOriginTransform.position, raycastOriginTransform.forward, out RaycastHit raycastHit, interactDistance, interactableLayerMask))
+        {
+            if (raycastHit.transform.TryGetComponent(out Interactable interactable))
+            {
+                if (interactable != interactedObject)
+                {
+                    SetInteractedObject(interactable);
+                    previousInteractable = interactable;
+                    OnInteractableDetected?.Invoke(this, EventArgs.Empty);
+                }
+            }
+            else
+            {
+                SetInteractedObject(null);
+            }
+        }
+        else
+        {
+            SetInteractedObject(null);
+        }
+
+        if(interactedObject == null && previousInteractable != null) {
+            previousInteractable = null;
+            OnInteractableOutOfRange?.Invoke(this, EventArgs.Empty);
+        }
+    }
+
+    private void SetInteractedObject(Interactable interactable) {
+        this.interactedObject = interactable;
     }
 }

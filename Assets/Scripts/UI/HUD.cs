@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -5,6 +6,10 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+   public static HUD Instance {get; private set;}
+
+   public event EventHandler OnActionButtonPressed;
+
    [SerializeField] private Button pauseButton;
    [SerializeField] private Transform pauseUITransform;
    [SerializeField] private Transform playerOverviewTransform;
@@ -12,13 +17,32 @@ public class HUD : MonoBehaviour
    [SerializeField] private Button actionButton;
    [SerializeField] private Button cameraButton;
 
+   [SerializeField] private GameObject actionButtonBackground;
+
    [SerializeField] private Transform cameraPivotTransform;
 
    private float currentBias = 0f;
 
+   private void Start() {
+      Player.Instance.OnInteractableDetected += Player_OnInteractableDetected;
+      Player.Instance.OnInteractableOutOfRange += Player_OnInteractableOutOfRange;
+
+      actionButton.onClick.AddListener(()=>{
+         OnActionButtonPressed?.Invoke(this, EventArgs.Empty);
+      });
+   }
+
+   private void Player_OnInteractableDetected(object sender, EventArgs e) {
+      actionButtonBackground.SetActive(true);
+   }
+
+   private void Player_OnInteractableOutOfRange(object sender, EventArgs e) {
+      actionButtonBackground.SetActive(false);
+   }
 
    private void Awake()
    {
+      Instance = this;
       pauseButton.onClick.AddListener(() =>
       {
          playerOverviewTransform.gameObject.SetActive(true);

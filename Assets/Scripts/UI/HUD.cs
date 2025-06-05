@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,69 +6,38 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
    public static HUD Instance {get; private set;}
-
-   public event EventHandler OnActionButtonPressed;
+   public event EventHandler OnActionButtonPressed; 
 
    [SerializeField] private Button pauseButton;
+   [SerializeField] private Button actionButton;
    [SerializeField] private Transform pauseUITransform;
    [SerializeField] private Transform playerOverviewTransform;
+   [SerializeField] private Transform actionButtonBackground;
 
-   [SerializeField] private Button actionButton;
-   [SerializeField] private Button cameraButton;
 
-   [SerializeField] private GameObject actionButtonBackground;
+   private void Awake() {
+      Instance = this;
 
-   [SerializeField] private Transform cameraPivotTransform;
+      pauseButton.onClick.AddListener(()=> {
+        playerOverviewTransform.gameObject.SetActive(true);
+        pauseUITransform.gameObject.SetActive(true);
+      });
 
-   private float currentBias = 0f;
-
-   private void Start() {
-      Player.Instance.OnInteractableDetected += Player_OnInteractableDetected;
-      Player.Instance.OnInteractableOutOfRange += Player_OnInteractableOutOfRange;
-
-      actionButton.onClick.AddListener(()=>{
+      actionButton.onClick.AddListener(() => {
          OnActionButtonPressed?.Invoke(this, EventArgs.Empty);
       });
    }
 
+   private void Start() {
+      Player.Instance.OnInteractableDetected += Player_OnInteractableDetected;
+      Player.Instance.OnInteractableOutOfRange += Player_OnInteractableOutOfRange;
+   }
+
    private void Player_OnInteractableDetected(object sender, EventArgs e) {
-      actionButtonBackground.SetActive(true);
+      actionButtonBackground.gameObject.SetActive(true);
    }
 
    private void Player_OnInteractableOutOfRange(object sender, EventArgs e) {
-      actionButtonBackground.SetActive(false);
-   }
-
-   private void Awake()
-   {
-      Instance = this;
-      pauseButton.onClick.AddListener(() =>
-      {
-         playerOverviewTransform.gameObject.SetActive(true);
-         pauseUITransform.gameObject.SetActive(true);
-      });
-
-      cameraButton.onClick.AddListener(() =>
-      {
-         _ = RotateYBy90Async(cameraPivotTransform, 0.3f);
-      });
-   }
-
-   private async Task RotateYBy90Async(Transform target, float duration)
-   {
-      Quaternion startRotation = target.rotation;
-      Quaternion endRotation = startRotation * Quaternion.Euler(0f, 90f, 0f);
-
-      float elapsed = 0f;
-
-      while (elapsed < duration)
-      {
-         await Task.Yield(); // Wait for the next frame
-         elapsed += Time.deltaTime;
-         float t = Mathf.Clamp01(elapsed / duration);
-         target.rotation = Quaternion.Slerp(startRotation, endRotation, t);
-      }
-
-      target.rotation = endRotation; // Snap to exact rotation at the end
+      actionButtonBackground.gameObject.SetActive(false);
    }
 }

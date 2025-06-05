@@ -2600,7 +2600,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 55
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: f2a209f1544af72d7bbf7287a04ebbf6, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -14417,7 +14417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1340984157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22992,7 +22992,7 @@ PrefabInstance:
     - target: {fileID: 1909818014555405380, guid: 47afcc4ceef8fb1babada3bb0a3b0b63, type: 3}
       propertyPath: actionButtonBackground
       value: 
-      objectReference: {fileID: 1395955448}
+      objectReference: {fileID: 1395955449}
     - target: {fileID: 1909818014555405380, guid: 47afcc4ceef8fb1babada3bb0a3b0b63, type: 3}
       propertyPath: playerOverviewTransform
       value: 

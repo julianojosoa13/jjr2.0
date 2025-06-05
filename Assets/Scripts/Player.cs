@@ -120,6 +120,7 @@ public class Player : MonoBehaviour
         }
 
         if(interactedObject == null && previousInteractable != null) {
+            previousInteractable.DeactivateVisual();
             previousInteractable = null;
             OnInteractableOutOfRange?.Invoke(this, EventArgs.Empty);
         }
@@ -127,5 +128,6 @@ public class Player : MonoBehaviour
 
     private void SetInteractedObject(Interactable interactable) {
         this.interactedObject = interactable;
+        this.interactedObject?.ActivateVisual();
     }
 }

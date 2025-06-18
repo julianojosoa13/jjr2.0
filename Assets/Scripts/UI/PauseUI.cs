@@ -14,7 +14,12 @@ public class PauseUI : MonoBehaviour
       });
 
        mainMenuButton.onClick.AddListener(()=> {
-        Application.Quit();
+      //   Application.Quit();
+        Loader.Load(Loader.Scene.MainMenu);
       });
+   }
+
+   private void Start() {
+      gameObject.SetActive(false);
    }
 }

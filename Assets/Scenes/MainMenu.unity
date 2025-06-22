@@ -2071,7 +2071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.77254903, g: 0.3236189, b: 0.2745098, a: 0.43137255}
+  m_EffectColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0.43137255}
   m_EffectDistance: {x: 10, y: 10}
   m_UseGraphicAlpha: 1
 --- !u!114 &513830719
@@ -2672,8 +2672,8 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: 43c7c6f8b5813af8fa91caf4704dce8a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  m_Pitch: 0.9
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4005,7 +4005,7 @@ MonoBehaviour:
   m_Content: {fileID: 1795422553}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -5419,7 +5419,7 @@ MonoBehaviour:
   m_Content: {fileID: 197591961}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -5447,7 +5447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.5058824, b: 1, a: 0.83137256}
+  m_Color: {r: 0.110270575, g: 0.12130129, b: 0.13207549, a: 0.83137256}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6796,6 +6796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeButton: {fileID: 579868535}
+  scrollRect: {fileID: 1231530173}
 --- !u!95 &1517883513
 Animator:
   serializedVersion: 7
@@ -7435,6 +7436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeButton: {fileID: 1655109357}
+  scrollRect: {fileID: 898458102}
 --- !u!95 &1678252572
 Animator:
   serializedVersion: 7

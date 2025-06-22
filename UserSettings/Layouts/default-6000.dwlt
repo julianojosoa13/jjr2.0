@@ -343,7 +343,15 @@ MonoBehaviour:
     - UnityEngine.InputSystem.Editor.InputSystemPlugin
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     - UnityEngine.InputSystem.Editor.InputSystemPlugin
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    - UnityEngine.InputSystem.Editor.InputSystemPlugin
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    - UnityEngine.InputSystem.Editor.InputSystemPlugin
     pluginStates:
+    - '{}'
+    - '{}'
+    - '{}'
+    - '{}'
     - '{}'
     - '{}'
     - '{}'
@@ -1099,9 +1107,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1328.3954, y: 664.7376, z: 3.5108144}
+    m_Target: {x: 1581.9388, y: 521.19867, z: 14.153521}
     speed: 2
-    m_Value: {x: 1328.3954, y: 664.7376, z: 3.5108144}
+    m_Value: {x: -59.943447, y: 1.2090117, z: 9.769539}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1149,15 +1157,15 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.28674343, y: 0.3419113, z: -0.11039209, w: -0.8880916}
   m_Size:
-    m_Target: 822.12537
+    m_Target: 653.7262
     speed: 2
-    m_Value: 822.12537
+    m_Value: 0.28537276
   m_Ortho:
     m_Target: 1
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1.06047
     m_SpeedNormalized: 0.53
@@ -1171,7 +1179,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.28674343, y: -0.3419113, z: 0.11039209, w: 0.88809156}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 14}
@@ -1410,7 +1418,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: bc3f0100
     m_LastClickedID: 81852
-    m_ExpandedIDs: 0000000022cb0000
+    m_ExpandedIDs: 0000000010d50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1439,7 +1447,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000022cb0000
+    m_ExpandedIDs: 0000000010d50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

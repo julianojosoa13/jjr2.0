@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class BookCollectible : Interactable
 {
    [SerializeField] private Canvas canvas;
-   
+   [SerializeField] private TimelineFactSO fact;
+
    // private void Start() {
    //    Player.Instance.OnInteractableDetected += Player_OnInteractableDetected;
    //    Player.Instance.OnInteractableOutOfRange += Player_OnInteractableOutOfRange;
@@ -18,16 +19,20 @@ public class BookCollectible : Interactable
    // private void Player_OnInteractableOutOfRange(object sender, EventArgs e) {
    //    DeactivateVisual();
    // }
-   
-   public override void Interact() {
-    Debug.Log("Interact!");
+
+   public override void Interact()
+   {
+      FactsUI.Instance.SetTimelineFact(fact);
+      FactsUI.Instance.Show();
    }
 
-   public override void ActivateVisual() {
+   public override void ActivateVisual()
+   {
       canvas.GetComponent<CanvasGroup>().alpha = 1f;
    }
 
-   public override void DeactivateVisual() {
+   public override void DeactivateVisual()
+   {
       canvas.GetComponent<CanvasGroup>().alpha = 0.25f;
    }
 }

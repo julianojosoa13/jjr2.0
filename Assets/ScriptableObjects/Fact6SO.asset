@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ac4bd9a56b99b3e85ed16f55a3429a, type: 3}
+  m_Name: Fact6SO
+  m_EditorClassIdentifier: 
+  date: 4 mars 1903
+  fact: "Il est issu d\u2019une famille noble Hova appauvrie, ce qui influencera
+    son rapport \xE0 la culture malgache et coloniale.      Son enfance modeste et
+    son \xE9ducation en grande partie autodidacte le poussent tr\xE8s t\xF4t vers
+    la litt\xE9rature."
+  headline: "     \"Rabearivelo na\xEEt \xE0 Tananarive, Madagascar.\"      "
+  number: No. 01 / 20

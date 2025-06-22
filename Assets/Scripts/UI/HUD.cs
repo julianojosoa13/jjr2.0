@@ -15,6 +15,7 @@ public class HUD : MonoBehaviour
    [SerializeField] private Transform playerOverviewTransform;
    [SerializeField] private Transform actionButtonBackground;
    [SerializeField] private Transform cameraTargetTransform;
+   [SerializeField] private Transform actionIndicatorTransform;
 
 
    private void Awake()
@@ -45,10 +46,12 @@ public class HUD : MonoBehaviour
    private void Player_OnInteractableDetected(object sender, EventArgs e)
    {
       actionButtonBackground.gameObject.SetActive(true);
+      actionIndicatorTransform.gameObject.SetActive(true);
    }
 
    private void Player_OnInteractableOutOfRange(object sender, EventArgs e)
    {
+      actionIndicatorTransform.gameObject.SetActive(false);
       actionButtonBackground.gameObject.SetActive(false);
    }
 }

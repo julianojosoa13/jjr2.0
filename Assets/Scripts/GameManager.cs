@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        TimelineFactStorage.ClearSavedFacts();
+        // TimelineFactStorage.ClearSavedFacts();
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

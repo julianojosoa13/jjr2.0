@@ -26,7 +26,9 @@ public class BookCollectible : Interactable
       FactsUI.Instance.Show();
       if (!GameManager.Instance.AlreadyDiscovered(fact))
       {
+         Debug.Log(GameManager.Instance.GetKnowFacts().Count);
          GameManager.Instance.AddKnowFact(fact);
+         Debug.Log(GameManager.Instance.GetKnowFacts().Count);
          // Debug.Log("Found " + GameManager.Instance.GetKnowFacts().Count + " / 20");
          FactsUI.Instance.ShowSuccessMessage(GameManager.Instance.GetKnowFacts().Count);
       }

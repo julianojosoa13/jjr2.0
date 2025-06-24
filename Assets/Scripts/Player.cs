@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
     public event EventHandler OnInteractableDetected;
     public event EventHandler OnInteractableOutOfRange;
 
-    public static Player Instance {get; private set;}
+    public static Player Instance { get; private set; }
 
     private const string ANIM_WALKING = "isWalking";
 
@@ -22,20 +22,24 @@ public class Player : MonoBehaviour
 
     private Interactable interactedObject;
     private Interactable previousInteractable;
-    
+
     private Vector3 lastInteractDir;
 
 
-    private void Awake() {
-       Instance = this;
+    private void Awake()
+    {
+        Instance = this;
     }
 
-    private void Start() {
-       HUD.Instance.OnActionButtonPressed += HUD_OnActionButtonPressed;
+    private void Start()
+    {
+        HUD.Instance.OnActionButtonPressed += HUD_OnActionButtonPressed;
     }
 
-    private void HUD_OnActionButtonPressed(object sender, EventArgs e) {
-        if(interactedObject != null) {
+    private void HUD_OnActionButtonPressed(object sender, EventArgs e)
+    {
+        if (interactedObject != null)
+        {
             interactedObject.Interact();
         }
     }
@@ -90,7 +94,7 @@ public class Player : MonoBehaviour
         // Move the player
     }
 
-     private void HandleInteract(Vector2 inputVector)
+    private void HandleInteract(Vector2 inputVector)
     {
 
         Vector3 moveDir = new Vector3(inputVector.x, 0, inputVector.y);
@@ -119,14 +123,16 @@ public class Player : MonoBehaviour
             SetInteractedObject(null);
         }
 
-        if(interactedObject == null && previousInteractable != null) {
+        if (interactedObject == null && previousInteractable != null)
+        {
             previousInteractable.DeactivateVisual();
             previousInteractable = null;
             OnInteractableOutOfRange?.Invoke(this, EventArgs.Empty);
         }
     }
 
-    private void SetInteractedObject(Interactable interactable) {
+    private void SetInteractedObject(Interactable interactable)
+    {
         this.interactedObject = interactable;
         this.interactedObject?.ActivateVisual();
     }

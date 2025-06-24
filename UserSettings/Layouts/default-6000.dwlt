@@ -345,7 +345,27 @@ MonoBehaviour:
     - UnityEngine.InputSystem.Editor.InputSystemPlugin
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
     - UnityEngine.InputSystem.Editor.InputSystemPlugin
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    - UnityEngine.InputSystem.Editor.InputSystemPlugin
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    - UnityEngine.InputSystem.Editor.InputSystemPlugin
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    - UnityEngine.InputSystem.Editor.InputSystemPlugin
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    - UnityEngine.InputSystem.Editor.InputSystemPlugin
+    - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    - UnityEngine.InputSystem.Editor.InputSystemPlugin
     pluginStates:
+    - '{}'
+    - '{}'
+    - '{}'
+    - '{}'
+    - '{}'
+    - '{}'
+    - '{}'
+    - '{}'
+    - '{}'
+    - '{}'
     - '{}'
     - '{}'
     - '{}'
@@ -1103,9 +1123,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1767.6013, y: 573.1431, z: 8.193226}
+    m_Target: {x: 1270.9595, y: 604.9166, z: -3.3239615}
     speed: 2
-    m_Value: {x: 1767.6013, y: 573.1431, z: 8.193226}
+    m_Value: {x: 1270.9595, y: 604.9166, z: -3.3239615}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1155,9 +1175,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 630.6446
+    m_Target: 668.79395
     speed: 2
-    m_Value: 630.6446
+    m_Value: 668.79395
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1414,7 +1434,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 118}
     m_SelectedIDs: 9ed60000
     m_LastClickedID: 54942
-    m_ExpandedIDs: 00000000eed50000
+    m_ExpandedIDs: 00000000aad60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1443,7 +1463,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000eed50000
+    m_ExpandedIDs: 00000000aad60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -6,7 +6,9 @@ public class PauseUI : MonoBehaviour
 {
    [SerializeField] private Button resumeButton;
    [SerializeField] private Button mainMenuButton;
+   [SerializeField] private Button encyclopediaButton;
    [SerializeField] private Transform playerOverviewTransform;
+   [SerializeField] private EncyclopediaUI encyclopediaUI;
    [SerializeField] AudioClip closeSound;
 
    private AudioSource audioSource;
@@ -29,6 +31,11 @@ public class PauseUI : MonoBehaviour
       {
          //   Application.Quit();
          Loader.Load(Loader.Scene.MainMenu);
+      });
+
+      encyclopediaButton.onClick.AddListener(() =>
+      {
+         encyclopediaUI.Show();
       });
    }
 }

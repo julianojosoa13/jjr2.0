@@ -24,6 +24,12 @@ public class BookCollectible : Interactable
    {
       FactsUI.Instance.SetTimelineFact(fact);
       FactsUI.Instance.Show();
+      if (!GameManager.Instance.AlreadyDiscovered(fact))
+      {
+         GameManager.Instance.AddKnowFact(fact);
+         // Debug.Log("Found " + GameManager.Instance.GetKnowFacts().Count + " / 20");
+         FactsUI.Instance.ShowSuccessMessage(GameManager.Instance.GetKnowFacts().Count);
+      }
    }
 
    public override void ActivateVisual()

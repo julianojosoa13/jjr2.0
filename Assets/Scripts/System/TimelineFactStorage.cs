@@ -1,15 +1,18 @@
+using System.Collections.Generic;
+using UnityEngine;
+
 public class TimelineFactStorage : MonoBehaviour
 {
     // Save a list of TimelineFactSO to PlayerPrefs
     public static void SaveFacts(List<TimelineFactSO> facts)
     {
         TimelineFactListWrapper wrapper = new TimelineFactListWrapper();
-        
+
         foreach (var fact in facts)
         {
             wrapper.facts.Add(new TimelineFactData(fact));
         }
-        
+
         string json = JsonUtility.ToJson(wrapper);
         PlayerPrefs.SetString("SavedTimelineFacts", json);
         PlayerPrefs.Save();
@@ -20,12 +23,12 @@ public class TimelineFactStorage : MonoBehaviour
     public static List<TimelineFactSO> LoadFacts()
     {
         List<TimelineFactSO> loadedFacts = new List<TimelineFactSO>();
-        
+
         if (PlayerPrefs.HasKey("SavedTimelineFacts"))
         {
             string json = PlayerPrefs.GetString("SavedTimelineFacts");
             TimelineFactListWrapper wrapper = JsonUtility.FromJson<TimelineFactListWrapper>(json);
-            
+
             foreach (var factData in wrapper.facts)
             {
                 TimelineFactSO fact = ScriptableObject.CreateInstance<TimelineFactSO>();
@@ -33,7 +36,7 @@ public class TimelineFactStorage : MonoBehaviour
                 loadedFacts.Add(fact);
             }
         }
-        
+
         return loadedFacts;
     }
 

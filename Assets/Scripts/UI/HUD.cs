@@ -21,24 +21,23 @@ public class HUD : MonoBehaviour
    private void Awake()
    {
       Instance = this;
+   }
 
+
+   private void Start()
+   {
       pauseButton.onClick.AddListener(() =>
-      {
-         playerOverviewTransform.gameObject.SetActive(true);
-         pauseUITransform.gameObject.SetActive(true);
-      });
+     {
+        //   playerOverviewTransform.gameObject.SetActive(true);
+        Debug.Log("Pause");
+        pauseUITransform.gameObject.SetActive(true);
+     });
 
       actionButton.onClick.AddListener(() =>
       {
          OnActionButtonPressed?.Invoke(this, EventArgs.Empty);
       });
 
-
-   }
-
-
-   private void Start()
-   {
       Player.Instance.OnInteractableDetected += Player_OnInteractableDetected;
       Player.Instance.OnInteractableOutOfRange += Player_OnInteractableOutOfRange;
    }

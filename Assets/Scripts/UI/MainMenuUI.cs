@@ -11,6 +11,7 @@ public class MainMenuUI : MonoBehaviour
   [SerializeField] private RectTransform confirmQuitDialogRectTransform;
   [SerializeField] private RectTransform creditsUIRectTransform;
   [SerializeField] private RectTransform settingsUIRectTransform;
+  [SerializeField] private EncyclopediaUI encyclopediaUI;
 
   private void Start()
   {
@@ -33,6 +34,11 @@ public class MainMenuUI : MonoBehaviour
     settingsButton.onClick.AddListener(() =>
     {
       settingsUIRectTransform.gameObject.SetActive(true);
+    });
+
+    achivementsButton.onClick.AddListener(() =>
+    {
+      encyclopediaUI.Show();
     });
   }
 }

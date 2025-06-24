@@ -6,23 +6,30 @@ public class DiscoveredTemplate : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI numberText;
     [SerializeField] private TextMeshProUGUI dateText;
+    [SerializeField] private Button button;
 
     private TimelineFactSO timelineFactSO;
-    private Button button;
-    private void Awake()
-    {
-        button = GetComponent<Button>();
-    }
+    // private void Awake()
+    // {
+    //     button = GetComponent<Button>();
+    // }
 
     private void Start()
     {
         button.onClick.AddListener(() =>
         {
-            if (timelineFactSO != null)
-            {
-                Debug.Log(timelineFactSO.headline);
-            }
+            SelectSelf();
         });
+    }
+
+    public void SelectSelf()
+    {
+        if (timelineFactSO != null)
+        {
+            button.Select();
+            EncyclopediaUI.Instance.SetSelectedFact(timelineFactSO);
+        }
+
     }
 
     public void SetNumber(int number)

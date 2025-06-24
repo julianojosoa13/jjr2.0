@@ -13,7 +13,6 @@ public class FactsUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI successNumberText;
     [SerializeField] private AudioClip closeSound;
 
-
     public static FactsUI Instance { get; private set; }
     private TimelineFactSO fact;
     private AudioSource audioSource;
